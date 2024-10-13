@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">LoginSharedPref</string>
+    <string name="email_hint">Ingrese su email</string>
+    <string name="bienvenido">¡Bienvenido!</string>
+    <string name="email">Email</string>
+    <string name="password">Contraseña</string>
+    <string name="password_hint">Ingrese su contraseña</string>
+    <string name="ingresar">Ingresar</string>
+    <string name="nombre_hint">Ingrese su nombre</string>
+    <string name="nombre">Nombre</string>
+    <string name="apellido">Apellido</string>
+    <string name="apellido_hint">Ingrese su apellido</string>
+    <string name="DNI">DNI</string>
+    <string name="dni_hint">Ingrese su DNI.</string>
+    <string name="nuevo_usuario">Nuevo usuario? Crear cuenta</string>
+    <string name="crear_nueva_cuenta">Crear nueva cuenta</string>
+    <string name="guardar">Guardar</string>
+    <string name="iniciar_sesi_n">Iniciar Sesión</string>
+    <string name="editando_usuario">Editando usuario</string>
+    <string name="loginconavatar">LoginConAvatar</string>
+</resources>

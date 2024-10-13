@@ -1,0 +1,32 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.LoginSharedPref" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+         <item name="colorPrimary">@color/buttonPrimary</item>
+        <item name="materialButtonStyle">@style/CustomButtonStyle</item>
+
+    </style>
+    <style name="CustomButtonStyle" parent="Widget.MaterialComponents.Button">
+        <item name="rippleColor">@color/buttonSecondaryRipple</item>
+        <item name="backgroundTint">@null</item>
+        <item name="colorPrimary">@color/buttonSecondary</item>
+
+        <item name="strokeColor">@color/buttonSecondaryRipple</item>
+    </style>
+
+    <style name="MainTitleStyle">
+        <item name="android:textSize">40sp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="fontFamily">@font/ar_one_sans_bold</item>
+    </style>
+
+    <style name="EditTextStyle">
+        <item name="android:layout_width">370dp</item>
+        <item name="android:layout_height">60dp</item>
+        <item name="paddingStart">25dp</item>
+        <item name="paddingEnd">25dp</item>
+        <item name="android:textColorHint">@color/hint</item>
+    </style>
+
+    <style name="Theme.LoginSharedPref" parent="Base.Theme.LoginSharedPref" />
+</resources>

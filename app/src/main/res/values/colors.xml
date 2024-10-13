@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="hint">#2D312A</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="semiTransparent">#33ffffff</color>
+
+    <color name="input">#C7CAC1</color>
+
+    <color name="buttonPrimary">#2F4032</color>
+    <color name="buttonPrimaryRipple">#1A281D</color>
+
+    <color name="buttonSecondary">@color/input</color>
+    <color name="buttonSecondaryRipple">#607656</color>
+</resources>
