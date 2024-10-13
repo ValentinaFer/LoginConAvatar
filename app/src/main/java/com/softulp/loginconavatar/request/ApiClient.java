@@ -12,6 +12,8 @@ import android.widget.Toast;
 
 import com.softulp.loginconavatar.model.Usuario;
 
+import java.io.BufferedInputStream;
+import java.io.BufferedOutputStream;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -41,9 +43,12 @@ public class ApiClient {
 
         //try-with-resources: FileOutputStream y ObjectOutputStream implementan
         //las interfaces AutoCloseable, por lo que utilizo un try-with-resources.
-        //aunque suceda una exception, el 'try-catch' se encargará de cerrarlo y catchear la exception
+        //aunque suceda una exception, el 'try-catch' se encargará de cerrarlos y catchear las
+        //exceptions, si estas sucedieran. Sin embargo, no provee con un buffer, hay que
+        //utilizarlo explicitamente.
         try (FileOutputStream fos = new FileOutputStream(archivoUsuario, false);
-             ObjectOutputStream oos = new ObjectOutputStream(fos)) {
+             BufferedOutputStream buff = new BufferedOutputStream(fos);
+             ObjectOutputStream oos = new ObjectOutputStream(buff)) {
             oos.writeObject(usuario);
             oos.flush();
             guardado = true;
@@ -61,7 +66,8 @@ public class ApiClient {
         archivoUsuario = conectar(context);
 
         try (FileInputStream fis = new FileInputStream(archivoUsuario);
-             ObjectInputStream ois = new ObjectInputStream(fis)){
+             BufferedInputStream buff = new BufferedInputStream(fis);
+             ObjectInputStream ois = new ObjectInputStream(buff)){
 
             usuario = (Usuario) ois.readObject();
 
